@@ -1,0 +1,670 @@
+:root {
+  --primary-dark: #212529; /* Dark background color */
+  --secondary-dark: #499be3; /* Slightly lighter dark for sections */
+  --accent-blue: #007bff; /* Bright blue for icons/buttons */
+  --text-light: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --light-bg: #ffffff;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif; /* Use a clean, readable font */
+}
+
+.aivi-app {
+  background-color: var(--secondary-dark);
+}
+
+h1, h2, h3 {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: 4rem 10%;
+  text-align: center;
+}
+
+/* --- Header/Navigation Bar Styles --- */
+
+.aivi-header {
+    background-color: var(--light-bg); 
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.logo {
+    height: 50px; /* Adjust logo size */
+    width: auto;
+}
+
+.main-nav {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: flex-end; 
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 25px;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    color:white; 
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color:var(--accent-blue);
+}
+
+.dropdown-icon {
+    font-size: 0.7rem;
+    margin-left: 5px;
+}
+
+/* Header Buttons */
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    border: none;
+}
+
+.btn-primary { 
+    background-color: var(--accent-blue);
+    color: white;
+}
+
+.btn-emergency { 
+    background-color: var(--accent-red); 
+    color: white;
+}
+
+.btn-primary:hover, .btn-emergency:hover {
+    opacity: 0.9;
+}
+
+
+
+/* --- 4. Therapies Styles --- */
+
+.aivi-therapies {
+  background-color: var(--primary-dark);
+  background-image: url('../public/images/pastelblue.png');
+  text-align: center;
+}
+
+.aivi-therapies h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.therapy-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.therapy-card {
+  width: 250px;
+  background-color: whitesmoke;
+padding-bottom: 100px;
+  border-radius: 10px;
+}
+
+
+
+.therapy-icon {
+  width: 245px;
+  height: 180px;
+  border-radius: 10px;
+}
+
+.therapy-card h3 {
+  color: var(--primary-dark);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.view-button {
+  background-color: var(--accent-blue);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.view-button:hover {
+  background-color: #0056b3;
+}
+
+/* --- 5. Centre Gallery Styles --- */
+.aivi-gallery {
+  background-color: white;
+  padding: 4rem 5%; /* Wider padding for gallery */
+}
+
+.aivi-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: rgb(123, 31, 244);
+}
+
+/* Simple flex layout for the gallery (You'll need CSS Grid for the exact complex layout) */
+.gallery-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+
+}
+
+.gallery-item {
+  /* Basic dimensions based on screenshot */
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.large-item {
+  width: 300px;
+  height: 400px;
+}
+.tall-item {
+  width: 400px;
+  height: 400px;
+}
+.small-item {
+  width: 350px;
+  height: 350px;
+}
+
+
+/* --- 6. Footer Styles --- */
+.aivi-footer {
+  background-color: var(--primary-dark);
+  padding: 40px 10%;
+  color: var(--text-secondary);
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #343a40;
+}
+
+.footer-logo {
+  margin-right: 50px;
+  max-width: 200px;
+
+}
+.footer-logo .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 80px;
+}
+.footer-logo p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.footer-section {
+  max-width: 250px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.contact p, .contact address {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.follow-us a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom .logo-small {
+    height: 25px;
+}
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 1024px) {
+  .aivi-hero, .steps-container, .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .hero-content, .hero-image-container {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-image-container {
+      order: -1; /* Move image above text on mobile */
+  }
+
+  .steps-container {
+      gap: 20px;
+  }
+  
+  .footer-section {
+      max-width: 100%;
+      text-align: center;
+  }
+  .footer-logo {
+      margin-right: 0;
+  }
+}
+/* General Setup */
+.about-container {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+/* --- Header Styles (Blue Bar) --- */
+.main-header {
+    background-color: #1a237e; /* Dark Blue */
+    color: white;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .logo span {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.main-header .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.main-header .nav-links a:hover,
+.main-header .nav-links a.active {
+    background-color: #2c387e; /* Slightly lighter blue for hover/active */
+    border-radius: 4px;
+}
+
+/* --- Main Content Box (The Large Blue Section) --- */
+.about-content-box {
+    background-color: #3f51b5; /* Medium Blue */
+    color: white;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1100px;
+    padding: 40px;
+    display: flex; /* To arrange text and image side-by-side */
+    gap: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text-section {
+    flex: 1.5; /* Takes up more space */
+    padding-right: 20px;
+}
+
+.about-text-section h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.about-text-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- Image Section --- */
+.about-image-section {
+    flex: 1; /* Takes up less space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: adds soft corners to the image */
+    /* Adjusting image to fit within the section similar to the photo */
+    object-fit: cover; 
+    max-height: 400px; 
+}
+.section-container {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0066cc;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-image {
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+/* TherapyDetailPage.css */
+
+.therapy-detail-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.back-button {
+  background-color: #1e3a8a;
+  color: rgb(102, 27, 27);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.therapy-hero-section {
+  background-color: #5875a0;
+  padding: 60px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.therapy-hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.take-assessment-button {
+  background-color: #1e3a8a;
+  color: rgb(245, 109, 109);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.therapy-details-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+color: green;
+}
+
+.content-block p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.three-image-gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-image-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.navbar {
+  width: 100%;
+  background: #4a79c1;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+color: white;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin-bottom: 4px;
+}
+
+/* ------ MOBILE VIEW ------ */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    background: #0a3a83;
+    width: 180px;
+    
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+    padding: 20px;
+    transition: 0.3s ease;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+}
+.welcome-text {
+  color: white; /* Or any other color you prefer */
+  font-weight: italic;
+  font-size: 30px;
+}
+/* Desktop Menu */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile default hide */
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/*n MAIN NAVBAR */
+.navbar {
+  background: #1e3a8a;
+  padding: 15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar {
+  background: #1e3a8a;
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.welcome-text {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu-box {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #1e3a8a;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.mobile-menu-box a {
+  color:white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+
