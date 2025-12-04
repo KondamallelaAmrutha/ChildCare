@@ -46,7 +46,7 @@ section {
 }
 
 .logo {
-    height: 50px; /* Adjust logo size */
+    height: 60px; /* Adjust logo size */
     width: auto;
 }
 
@@ -67,7 +67,6 @@ section {
 
 .nav-item {
     margin-left: 25px;
-    
 }
 
 .nav-link {
@@ -120,10 +119,9 @@ section {
 
 
 /* --- 4. Therapies Styles --- */
-
 .aivi-therapies {
   background-color: var(--primary-dark);
-  background-image: url('../public/images/pastelblue.png');
+  background-image: url(../public/images/pastelblue.png);
   text-align: center;
 }
 
